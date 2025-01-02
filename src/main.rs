@@ -59,9 +59,12 @@ where
 
 fn main() {
     let radius = 1.0; // Фиксированный радиус
-    for dimension in 1..=40 {
+    println!("Объём n-мерной гиперсферы с радиусом r:");
+    println!("{:<10} {:<10} {:<20}", "Dimension", "Radius", "Volume");
+    println!("{}", "-".repeat(40));
+    for dimension in 1..=22 {
         let volume = hyper_sphere_volume(radius, dimension);
-        println!("Объём {}-мерной гиперсферы с радиусом {}: {}", dimension, radius, volume);
+        println!("{:<10} {:<10} {:<20.6}", dimension, radius, volume);
     }
 }
 
